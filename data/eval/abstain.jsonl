@@ -1,0 +1,18 @@
+{"qid": "a01", "question": "番茄炒蛋怎么做", "expect": "abstain", "kind": "域外"}
+{"qid": "a02", "question": "公司年假怎么申请，需要提前几天提", "expect": "abstain", "kind": "域外"}
+{"qid": "a03", "question": "2026 年房价会涨吗", "expect": "abstain", "kind": "域外"}
+{"qid": "a04", "question": "感冒了应该吃什么药", "expect": "abstain", "kind": "域外"}
+{"qid": "a05", "question": "怎么用 Python 爬取豆瓣电影评分", "expect": "abstain", "kind": "域外"}
+{"qid": "a06", "question": "个人所得税专项附加扣除怎么申报", "expect": "abstain", "kind": "域外"}
+{"qid": "a07", "question": "上海地铁 11 号线首班车几点", "expect": "abstain", "kind": "域外"}
+{"qid": "a08", "question": "智谱的 Batch API 支持的最大并发数是多少", "expect": "abstain", "kind": "域内无答案"}
+{"qid": "a09", "question": "DeepSeek 的注册用户总数有多少", "expect": "abstain", "kind": "域内无答案"}
+{"qid": "a10", "question": "百炼的模型部署支持按秒计费吗", "expect": "abstain", "kind": "域内无答案"}
+{"qid": "a11", "question": "自定义 Skill 的目录里必须包含哪个文件", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a12", "question": "Files API 上传单个文件最大支持多大", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a13", "question": "怎么关闭 DeepSeek 的思考模式", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a14", "question": "智谱的文本向量 embedding 模型叫什么", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a15", "question": "Batch API 的价格是标准 API 的百分之多少", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a16", "question": "千问Plus 在华北2（北京）的输入单价是多少", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a17", "question": "Langcli 可以在哪些操作系统上安装", "expect": "answer", "kind": "域内有答案"}
+{"qid": "a18", "question": "智谱免费模型的并发限制是多少", "expect": "answer", "kind": "域内有答案"}

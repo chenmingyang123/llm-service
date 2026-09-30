@@ -1,0 +1,25 @@
+{"qid": "auto_term_001", "question": "这段内容里，箭头图标使用的遮罩图片地址中，文件名包含哪些关键字母？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "term", "expect_any": ["arrow-down-left", "arrow-down-left.svg"]}
+{"qid": "auto_term_002", "question": "所有 token 的总数等于哪两类 token 数量相加？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "term", "expect_any": ["prompt", "completion"]}
+{"qid": "auto_term_003", "question": "使用 DeepSeek 的 FIM 补全功能时，需要把 base_url 设置成哪个地址？", "expect_chunk": "0cf4cc365732-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["https://api.deepseek.com/beta", "beta"]}
+{"qid": "auto_term_004", "question": "使用 Token Plan 时，中国香港地域的 Anthropic 兼容地址是什么？", "expect_chunk": "00b84be55590-0006", "expect_source": "bailian", "type": "term", "expect_any": ["https://trial.cn-hongkong.maas.aliyuncs.com/apps/anthropic", "中国香港"]}
+{"qid": "auto_term_005", "question": "在兼容端点中，列表分页默认的 limit 值是多少，允许的最大值又是多少？", "expect_chunk": "b74fd9095937-0004", "expect_source": "deepseek", "type": "term", "expect_any": ["1000", "20"]}
+{"qid": "auto_term_006", "question": "在示例中，高速模式相比标准模式的 TPS 提升到了多少倍？", "expect_chunk": "dcd1781681dd-0002", "expect_source": "bailian", "type": "term", "expect_any": ["1.5~2", "1.5-2", "1.5到2"]}
+{"qid": "auto_term_007", "question": "GLM Coding Plan 的套餐采用什么样的用量限制机制？", "expect_chunk": "c3089cfb6d10-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["每 5 小时限额", "每周限额"]}
+{"qid": "auto_term_008", "question": "最小计费为分钟的小时单价，和最小计费为天的包月单价，分别对应哪种计费方式？", "expect_chunk": "0d8226f12005-0036", "expect_source": "bailian", "type": "term", "expect_any": ["小时", "分钟", "包月", "天"]}
+{"qid": "auto_term_009", "question": "在知识检索完成后，如何查看详细的召回结果？", "expect_chunk": "5300d35e278d-0010", "expect_source": "zhipu", "type": "term", "expect_any": ["完成知识检索", "下拉箭头"]}
+{"qid": "auto_term_010", "question": "在这些取值里，哪些情况下 disable_parallel_tool_use 会被忽略？", "expect_chunk": "9cce2f8809c6-0003", "expect_source": "deepseek", "type": "term", "expect_any": ["auto", "any", "tool"]}
+{"qid": "auto_term_011", "question": "训练Token总量是怎么计算的？", "expect_chunk": "0d8226f12005-0013", "expect_source": "bailian", "type": "term", "expect_any": ["计费时长", "总时长", "max_pixels", "n_epochs"]}
+{"qid": "auto_term_012", "question": "在指定使用的模型时，可选的模型 ID 有哪两个？", "expect_chunk": "34ab59c2706c-0001", "expect_source": "deepseek", "type": "term", "expect_any": ["deepseek-flash", "deepseek-v4-pro"]}
+{"qid": "auto_term_013", "question": "qwen-image-3.0-pro 模型的任务下发接口每分钟最多调用多少次？", "expect_chunk": "24154652d880-0104", "expect_source": "bailian", "type": "term", "expect_any": ["5 次/分钟", "5次"]}
+{"qid": "auto_term_014", "question": "在 High 档位下，GLM-5.3 每项任务平均输出约多少 Token 时准确率达到 31.4%？", "expect_chunk": "b41a431f2f99-0009", "expect_source": "zhipu", "type": "term", "expect_any": ["5万", "5 万"]}
+{"qid": "auto_term_015", "question": "当某个 token 的输出概率极小、不在 top 20 最可能输出的 token 中时，它的对数概率值是多少？", "expect_chunk": "10fdf9e66590-0016", "expect_source": "deepseek", "type": "term", "expect_any": ["-9999.0", "-9999"]}
+{"qid": "auto_term_016", "question": "这些模型的每分钟调用次数上限是多少？", "expect_chunk": "24154652d880-0065", "expect_source": "bailian", "type": "term", "expect_any": ["600", "RPM"]}
+{"qid": "auto_term_017", "question": "已经安装过 OpenClaw 的用户，可以通过哪个命令重新进入配置阶段？", "expect_chunk": "5c92f6f5001b-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["onboard", "install-daemon"]}
+{"qid": "auto_term_018", "question": "哪些工具属于 Skill 类，需要在配置文件开头添加 YAML front matter？", "expect_chunk": "6b990ae979d7-0003", "expect_source": "bailian", "type": "term", "expect_any": ["Codex", "Qwen Code", "OpenClaw", "Hermes Agent", "Qoder"]}
+{"qid": "auto_term_019", "question": "这个图标的遮罩是否允许重复？", "expect_chunk": "e259f4040b0b-0004", "expect_source": "zhipu", "type": "term", "expect_any": ["no-repeat", "不重复"]}
+{"qid": "auto_term_020", "question": "用户发送中断后，运行中的命令如果在宽限期内没有自行结束，会在大约多少秒后被强制终止？", "expect_chunk": "d1c6bd0316d2-0011", "expect_source": "zhipu", "type": "term", "expect_any": ["3 秒", "3秒", "约 3 秒"]}
+{"qid": "auto_term_021", "question": "自定义 user_id 的可选字符集是什么，最大长度是多少？", "expect_chunk": "10fdf9e66590-0012", "expect_source": "deepseek", "type": "term", "expect_any": ["a-zA-Z0-9\\-_", "512"]}
+{"qid": "auto_term_022", "question": "qwen3-coder-flash 模型每分钟最多允许调用多少次？", "expect_chunk": "24154652d880-0049", "expect_source": "bailian", "type": "term", "expect_any": ["1,200", "1200"]}
+{"qid": "auto_term_023", "question": "发起调用前需要准备好哪两样东西？", "expect_chunk": "8aaa2d602335-0009", "expect_source": "zhipu", "type": "term", "expect_any": ["API Key", "模型"]}
+{"qid": "auto_term_024", "question": "DeepSeek V4.1 Flash 的闲时价格是高峰时段价格的多少？", "expect_chunk": "ec90a2c3e901-0002", "expect_source": "deepseek", "type": "term", "expect_any": ["一半", "50%"]}
+{"qid": "auto_term_025", "question": "在720P分辨率下，有声视频每秒比无声视频贵多少元？", "expect_chunk": "4f93e19bacec-0285", "expect_source": "bailian", "type": "term", "expect_any": ["0.53", "0.27", "0.26"]}

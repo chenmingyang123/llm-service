@@ -1,0 +1,5 @@
+{"qid": "auto001", "question": "在 Deep Code 中，除了 Shift+Enter，还可以用哪个快捷键实现换行？", "expect_chunk": "db0f32072dcf-0001", "expect_source": "deepseek", "type": "term", "expect_any": ["Ctrl+J", "换行"]}
+{"qid": "auto002", "question": "9月2日订阅Lite套餐（39元/月，月额度11,500 Credits），9月12日升级至Essential套餐（79元/月，月额度25,500 Credits），当前订阅周期剩余20天，当前周期新增额度约为多少Credits？", "expect_chunk": "b4c5dfd725f8-0006", "expect_source": "bailian", "type": "term", "expect_any": ["9,334", "20", "25,500", "11,500"]}
+{"qid": "auto003", "question": "文档片段中 className 为 \"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0\" 的元素，其父级 Card 的 title 是什么？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "term", "expect_any": ["输出", "Card", "title"]}
+{"qid": "auto004", "question": "用户 prompt 中，命中上下文缓存的 token 数等于哪两个值的和？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "term", "expect_any": ["prompt_cache_hit_tokens", "prompt_cache_miss_tokens"]}
+{"qid": "auto005", "question": "qwen3-coder-next 的服务部署范围是什么？每分钟调用次数（RPM）和每分钟消耗Token数（TPM）分别是多少？", "expect_chunk": "24154652d880-0074", "expect_source": "bailian", "type": "term", "expect_any": ["国际", "600", "1,000,000"]}

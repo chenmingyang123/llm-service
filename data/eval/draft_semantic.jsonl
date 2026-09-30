@@ -1,0 +1,15 @@
+{"qid": "auto_semantic_001", "question": "在 Deep Code 中按哪个键可以中断当前模型的回复？", "expect_chunk": "db0f32072dcf-0001", "expect_source": "deepseek", "type": "semantic", "expect_any": ["Esc", "中断"]}
+{"qid": "auto_semantic_002", "question": "Harness 服务调用失败时，超出免费额度的部分是怎么计费的？", "expect_chunk": "8a8a2ddbedf4-0003", "expect_source": "bailian", "type": "semantic", "expect_any": ["折扣价", "按量账单"]}
+{"qid": "auto_semantic_003", "question": "在这段界面代码里，输出卡片图标所用的遮罩图像地址里包含了哪个查询参数值？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "semantic", "expect_any": ["max", "auto", "format"]}
+{"qid": "auto_semantic_004", "question": "在流式返回中，每个 chat completion chunk 对象里包含哪个用于标识该对话的唯一字段？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "semantic", "expect_any": ["唯一标识符", "对话"]}
+{"qid": "auto_semantic_005", "question": "qwen3-coder-480b-a35b-instruct 每分钟消耗 Token 数的限流上限是多少？", "expect_chunk": "24154652d880-0075", "expect_source": "bailian", "type": "semantic", "expect_any": ["1,000,000", "1000000"]}
+{"qid": "auto_semantic_006", "question": "文档里提到的 LangChain 集成是用来做什么的？", "expect_chunk": "197be800b64a-0009", "expect_source": "zhipu", "type": "semantic", "expect_any": ["构建复杂的 AI 应用", "智能代理"]}
+{"qid": "auto_semantic_007", "question": "使用 DeepSeek 的 FIM 补全功能时，需要把 base_url 设置成什么？", "expect_chunk": "0cf4cc365732-0000", "expect_source": "deepseek", "type": "semantic", "expect_any": ["beta", "api.deepseek.com/beta"]}
+{"qid": "auto_semantic_008", "question": "Token Plan 的专属 API Key 只能用在什么场景，不能用于什么用途？", "expect_chunk": "00b84be55590-0006", "expect_source": "bailian", "type": "semantic", "expect_any": ["Claude Code", "后端服务"]}
+{"qid": "auto_semantic_009", "question": "在兼容端点中，列表分页支持的游标参数是哪两个且关系如何？", "expect_chunk": "b74fd9095937-0004", "expect_source": "deepseek", "type": "semantic", "expect_any": ["after_id", "before_id", "互斥"]}
+{"qid": "auto_semantic_010", "question": "在华北2（北京）区域，以200输入加100输出kTPM、1天为例，高速模式的TPS是标准模式的多少倍？", "expect_chunk": "dcd1781681dd-0002", "expect_source": "bailian", "type": "semantic", "expect_any": ["1.5", "2", "1.5~2"]}
+{"qid": "auto_semantic_011", "question": "GLM Coding Plan 套餐采用什么样的用量额度限制机制？", "expect_chunk": "c3089cfb6d10-0000", "expect_source": "zhipu", "type": "semantic", "expect_any": ["每 5 小时限额", "每周限额"]}
+{"qid": "auto_semantic_012", "question": "知识检索失败或结果为空时，系统会基于什么给出回答？", "expect_chunk": "5300d35e278d-0010", "expect_source": "zhipu", "type": "semantic", "expect_any": ["模型自身知识库", "自身知识库"]}
+{"qid": "auto_semantic_013", "question": "训练Token总量的计算公式里，n_epochs这个超参数表示什么？", "expect_chunk": "0d8226f12005-0013", "expect_source": "bailian", "type": "semantic", "expect_any": ["循环次数", "创建微调任务时配置"]}
+{"qid": "auto_semantic_014", "question": "在深色模式下，这个图标容器的背景颜色使用哪个样式变体？", "expect_chunk": "90bf1d0b5b79-0012", "expect_source": "zhipu", "type": "semantic", "expect_any": ["primary-light", "深色模式", "bg-primary-light"]}
+{"qid": "auto_semantic_015", "question": "这个接口支持的模型 ID 有哪两个可选值？", "expect_chunk": "34ab59c2706c-0001", "expect_source": "deepseek", "type": "semantic", "expect_any": ["deepseek-flash", "deepseek-v4-pro"]}

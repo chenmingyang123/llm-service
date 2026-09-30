@@ -1,0 +1,10 @@
+# 装包时若卡住，多半是 pip 被指向了不可达镜像，加官方源：
+#   pip install -r requirements.txt -i https://pypi.org/simple
+fastapi>=0.141
+uvicorn[standard]>=0.53
+pydantic>=2.13
+python-dotenv>=1.2
+httpx>=0.28        # TestClient 与后续的 httpx 调用
+numpy>=2.0         # 向量库检索（app/retrieval/store.py）
+mcp>=2.0           # MCP Server（mcp_server/）；2.x 已把 FastMCP 改名为 MCPServer
+pytest>=9.1        # 测试

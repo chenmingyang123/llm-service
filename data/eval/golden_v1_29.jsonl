@@ -1,0 +1,29 @@
+{"qid": "s01", "question": "DeepSeek 的上下文硬盘缓存，最小命中前缀是多少 token", "expect_chunk": "3c38c79b63bb-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["上下文硬盘缓存"]}
+{"qid": "s02", "question": "怎么关闭 DeepSeek 的思考模式", "expect_chunk": "10fdf9e66590-0005", "expect_source": "deepseek", "type": "term", "expect_any": ["thinking"]}
+{"qid": "s03", "question": "阿里百炼的 base_url 要怎么拼", "expect_chunk": "00b84be55590-0007", "expect_source": "bailian", "type": "term", "expect_any": ["compatible-mode"]}
+{"qid": "s04", "question": "DeepSeek 的思考模式会在最终回答之前先输出什么", "expect_chunk": "4e80ab907279-0000", "expect_source": "deepseek", "type": "semantic", "expect_any": ["思维链"]}
+{"qid": "s05", "question": "智谱的文本向量 embedding 模型叫什么", "expect_chunk": "9bfc1f3daf1a-0006", "expect_source": "zhipu", "type": "term", "expect_any": ["embedding-3"]}
+{"qid": "s06", "question": "智谱团队版的积分是怎么抵扣的", "expect_chunk": "4d1a8e99c3b9-0005", "expect_source": "zhipu", "type": "semantic", "expect_any": ["积分"]}
+{"qid": "s07", "question": "Files API 上传单个文件最大支持多大", "expect_chunk": "b74fd9095937-0005", "expect_source": "deepseek", "type": "term", "expect_any": ["MiB"]}
+{"qid": "s08", "question": "智谱免费模型的并发限制是多少", "expect_chunk": "99b711840457-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["并发"]}
+{"qid": "g01", "question": "Batch API 的价格是标准 API 的百分之多少", "expect_chunk": "ec6306eb4304-0019", "expect_source": "zhipu", "type": "term", "expect_any": ["50%"]}
+{"qid": "g02", "question": "套餐额度用完之后，会不会继续扣我账户里的钱", "expect_chunk": "c3089cfb6d10-0003", "expect_source": "zhipu", "type": "semantic", "expect_any": ["额度"]}
+{"qid": "g03", "question": "自定义 Skill 的目录里必须包含哪个文件", "expect_chunk": "f9d9ead07f0a-0001", "expect_source": "zhipu", "type": "term", "expect_any": ["SKILL.md"]}
+{"qid": "g04", "question": "更新 Environment 时 config 字段是整体替换还是深度合并", "expect_chunk": "ed1d2c0309cb-0003", "expect_source": "zhipu", "type": "term", "expect_any": ["config"]}
+{"qid": "g05", "question": "Batch 任务上传的输入文件必须是什么格式", "expect_chunk": "ec6306eb4304-0014", "expect_source": "zhipu", "type": "term", "expect_any": ["Jsonl"]}
+{"qid": "g06", "question": "智谱批量处理里 Embedding-3 的额度是多少次", "expect_chunk": "ec6306eb4304-0020", "expect_source": "zhipu", "type": "term", "expect_any": ["200万次"]}
+{"qid": "g07", "question": "千问Plus 在华北2（北京）的输入单价是多少", "expect_chunk": "4f93e19bacec-0022", "expect_source": "bailian", "type": "term", "expect_any": ["输入单价"]}
+{"qid": "g08", "question": "百炼千问模型触发限流的条件是按什么算的", "expect_chunk": "24154652d880-0078", "expect_source": "bailian", "type": "semantic", "expect_any": ["限流"]}
+{"qid": "g09", "question": "模型部署的后付费输入是按什么单位计费的", "expect_chunk": "0d8226f12005-0024", "expect_source": "bailian", "type": "term", "expect_any": ["TPM"]}
+{"qid": "g10", "question": "百炼的按量计费适合什么样的用量场景", "expect_chunk": "661882d5cf94-0011", "expect_source": "bailian", "type": "semantic", "expect_any": ["按量计费"]}
+{"qid": "g11", "question": "Langcli 可以在哪些操作系统上安装", "expect_chunk": "3f6fe5a1c85e-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["WSL"]}
+{"qid": "g12", "question": "查询单个文件信息要调哪个接口", "expect_chunk": "68e0c64c875e-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["/files/"]}
+{"qid": "g13", "question": "调用 DeepSeek V4 模型时 base_url 需要改吗", "expect_chunk": "4fe887132ea9-0003", "expect_source": "deepseek", "type": "term", "expect_any": ["base_url"]}
+{"qid": "g14", "question": "DeepSeek-V3-0324 私有化部署要更新哪些文件", "expect_chunk": "84992a07d047-0001", "expect_source": "deepseek", "type": "term", "expect_any": ["tokenizer_config.json"]}
+{"qid": "g15", "question": "想训练一个自己的模型，该从哪里开始", "expect_chunk": "6b631811c34b-0007", "expect_source": "zhipu", "type": "semantic", "expect_any": ["微调"]}
+{"qid": "g16", "question": "我改了 Agent 的配置，已经在跑的会话会跟着变吗", "expect_chunk": "c5a10e80fa85-0004", "expect_source": "zhipu", "type": "semantic", "expect_any": ["会话"]}
+{"qid": "g17", "question": "同一个业务有多个入口都在调模型，提示词该怎么写", "expect_chunk": "0bbc5079cf31-0009", "expect_source": "zhipu", "type": "semantic", "expect_any": ["Prompt"]}
+{"qid": "g18", "question": "千问Omni 生成视频支持哪些分辨率", "expect_chunk": "4f93e19bacec-0266", "expect_source": "bailian", "type": "term", "expect_any": ["分辨率"]}
+{"qid": "g19", "question": "平台要调整收费标准的话，会提前告诉用户吗", "expect_chunk": "c5c30ffccb79-0004", "expect_source": "zhipu", "type": "semantic", "expect_any": ["价格"]}
+{"qid": "g20", "question": "coding plan 的使用须知里能查到哪些事项", "expect_chunk": "6e744f3c4664-0007", "expect_source": "zhipu", "type": "term", "expect_any": ["使用须知"]}
+{"qid": "g21", "question": "智谱兼容哪个主流的大模型应用开发框架", "expect_chunk": "d1ccc74e7725-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["LangChain"]}

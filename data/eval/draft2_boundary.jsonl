@@ -1,0 +1,4 @@
+{"qid": "auto_boundary_001", "question": "如果部署环境不支持原生 FP8 推理，是否还能直接运行 DeepSeek-V3？", "expect_chunk": "3ed7a8b7d5a4-0002", "expect_source": "deepseek", "type": "boundary", "expect_any": ["BF16", "转换脚本", "TensorRT-LLM", "MindIE"]}
+{"qid": "auto_boundary_002", "question": "如果要在会话中挂载第 9 个 Memory Store，或挂载路径名不符合平台生成的格式，会出现什么限制或问题？", "expect_chunk": "856cead8ee2f-0001", "expect_source": "zhipu", "type": "boundary", "expect_any": ["最多 8 个", "单个会话", "平台生成", "mount_path"]}
+{"qid": "auto_boundary_003", "question": "在什么情况下，DeepSeek-V2.5-1210 将不再获得 V2 系列的后续更新？", "expect_chunk": "646ea6058eea-0000", "expect_source": "deepseek", "type": "boundary", "expect_any": ["下一个全新基座模型系列", "最后一次更新", "V2 系列"]}
+{"qid": "auto_boundary_004", "question": "这些模型的服务部署范围如果不属于国际，是否就不在文档所列的适用范围内？", "expect_chunk": "4f93e19bacec-0081", "expect_source": "bailian", "type": "boundary", "expect_any": ["国际", "服务部署范围", "不适用"]}

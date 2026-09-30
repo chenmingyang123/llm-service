@@ -1,0 +1,120 @@
+{"qid": "s01", "question": "DeepSeek 的上下文硬盘缓存，最小命中前缀是多少 token", "expect_chunk": "3c38c79b63bb-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["上下文硬盘缓存"]}
+{"qid": "s02", "question": "怎么关闭 DeepSeek 的思考模式", "expect_chunk": "10fdf9e66590-0005", "expect_source": "deepseek", "type": "term", "expect_any": ["thinking"]}
+{"qid": "s03", "question": "阿里百炼的 base_url 要怎么拼", "expect_chunk": "00b84be55590-0007", "expect_source": "bailian", "type": "term", "expect_any": ["compatible-mode"]}
+{"qid": "s04", "question": "DeepSeek 的思考模式会在最终回答之前先输出什么", "expect_chunk": "4e80ab907279-0000", "expect_source": "deepseek", "type": "semantic", "expect_any": ["思维链"]}
+{"qid": "s05", "question": "智谱的文本向量 embedding 模型叫什么", "expect_chunk": "9bfc1f3daf1a-0006", "expect_source": "zhipu", "type": "term", "expect_any": ["embedding-3"]}
+{"qid": "s06", "question": "智谱团队版的积分是怎么抵扣的", "expect_chunk": "4d1a8e99c3b9-0005", "expect_source": "zhipu", "type": "semantic", "expect_any": ["积分"]}
+{"qid": "s07", "question": "Files API 上传单个文件最大支持多大", "expect_chunk": "b74fd9095937-0005", "expect_source": "deepseek", "type": "term", "expect_any": ["MiB"]}
+{"qid": "s08", "question": "智谱免费模型的并发限制是多少", "expect_chunk": "99b711840457-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["并发"]}
+{"qid": "g01", "question": "Batch API 的价格是标准 API 的百分之多少", "expect_chunk": "ec6306eb4304-0019", "expect_source": "zhipu", "type": "term", "expect_any": ["50%"]}
+{"qid": "g02", "question": "套餐额度用完之后，会不会继续扣我账户里的钱", "expect_chunk": "c3089cfb6d10-0003", "expect_source": "zhipu", "type": "semantic", "expect_any": ["额度"]}
+{"qid": "g03", "question": "自定义 Skill 的目录里必须包含哪个文件", "expect_chunk": "f9d9ead07f0a-0001", "expect_source": "zhipu", "type": "term", "expect_any": ["SKILL.md"]}
+{"qid": "g04", "question": "更新 Environment 时 config 字段是整体替换还是深度合并", "expect_chunk": "ed1d2c0309cb-0003", "expect_source": "zhipu", "type": "term", "expect_any": ["config"]}
+{"qid": "g05", "question": "Batch 任务上传的输入文件必须是什么格式", "expect_chunk": "ec6306eb4304-0014", "expect_source": "zhipu", "type": "term", "expect_any": ["Jsonl"]}
+{"qid": "g06", "question": "智谱批量处理里 Embedding-3 的额度是多少次", "expect_chunk": "ec6306eb4304-0020", "expect_source": "zhipu", "type": "term", "expect_any": ["200万次"]}
+{"qid": "g07", "question": "千问Plus 在华北2（北京）的输入单价是多少", "expect_chunk": "4f93e19bacec-0022", "expect_source": "bailian", "type": "term", "expect_any": ["输入单价"]}
+{"qid": "g08", "question": "百炼千问模型触发限流的条件是按什么算的", "expect_chunk": "24154652d880-0078", "expect_source": "bailian", "type": "semantic", "expect_any": ["限流"]}
+{"qid": "g09", "question": "模型部署的后付费输入是按什么单位计费的", "expect_chunk": "0d8226f12005-0024", "expect_source": "bailian", "type": "term", "expect_any": ["TPM"]}
+{"qid": "g10", "question": "百炼的按量计费适合什么样的用量场景", "expect_chunk": "661882d5cf94-0011", "expect_source": "bailian", "type": "semantic", "expect_any": ["按量计费"]}
+{"qid": "g11", "question": "Langcli 可以在哪些操作系统上安装", "expect_chunk": "3f6fe5a1c85e-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["WSL"]}
+{"qid": "g12", "question": "查询单个文件信息要调哪个接口", "expect_chunk": "68e0c64c875e-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["/files/"]}
+{"qid": "g13", "question": "调用 DeepSeek V4 模型时 base_url 需要改吗", "expect_chunk": "4fe887132ea9-0003", "expect_source": "deepseek", "type": "term", "expect_any": ["base_url"]}
+{"qid": "g14", "question": "DeepSeek-V3-0324 私有化部署要更新哪些文件", "expect_chunk": "84992a07d047-0001", "expect_source": "deepseek", "type": "term", "expect_any": ["tokenizer_config.json"]}
+{"qid": "g15", "question": "想训练一个自己的模型，该从哪里开始", "expect_chunk": "6b631811c34b-0007", "expect_source": "zhipu", "type": "semantic", "expect_any": ["微调"]}
+{"qid": "g16", "question": "我改了 Agent 的配置，已经在跑的会话会跟着变吗", "expect_chunk": "c5a10e80fa85-0004", "expect_source": "zhipu", "type": "semantic", "expect_any": ["会话"]}
+{"qid": "g17", "question": "同一个业务有多个入口都在调模型，提示词该怎么写", "expect_chunk": "0bbc5079cf31-0009", "expect_source": "zhipu", "type": "semantic", "expect_any": ["Prompt"]}
+{"qid": "g18", "question": "千问Omni 生成视频支持哪些分辨率", "expect_chunk": "4f93e19bacec-0266", "expect_source": "bailian", "type": "term", "expect_any": ["分辨率"]}
+{"qid": "g19", "question": "平台要调整收费标准的话，会提前告诉用户吗", "expect_chunk": "c5c30ffccb79-0004", "expect_source": "zhipu", "type": "semantic", "expect_any": ["价格"]}
+{"qid": "g20", "question": "coding plan 的使用须知里能查到哪些事项", "expect_chunk": "6e744f3c4664-0007", "expect_source": "zhipu", "type": "term", "expect_any": ["使用须知"]}
+{"qid": "g21", "question": "智谱兼容哪个主流的大模型应用开发框架", "expect_chunk": "d1ccc74e7725-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["LangChain"]}
+{"qid": "h01", "question": "DeepSeek 的硬盘缓存是怎么触发的，百炼的免费额度用完即停又是什么表现", "expect_chunk": "09ef360777ad-0001", "expect_source": "deepseek", "type": "multi", "expect_any": ["硬盘缓存"], "expect_chunks": ["09ef360777ad-0001", "f64fae639142-0003"]}
+{"qid": "h02", "question": "智谱的速率限制和百炼的限流条件，分别是按什么维度限制的", "expect_chunk": "afb23b5c7d34-0000", "expect_source": "zhipu", "type": "multi", "expect_any": ["速率限制"], "expect_chunks": ["afb23b5c7d34-0000", "24154652d880-0054"]}
+{"qid": "h03", "question": "百炼的免费额度有效期是多久，智谱的套餐额度耗尽后要等多久恢复", "expect_chunk": "f64fae639142-0000", "expect_source": "bailian", "type": "multi", "expect_any": ["90 天"], "expect_chunks": ["f64fae639142-0000", "c3089cfb6d10-0003"]}
+{"qid": "h04", "question": "开启百炼的免费额度用完即停后，额度耗尽会返回什么", "expect_chunk": "f64fae639142-0003", "expect_source": "bailian", "type": "boundary", "expect_any": ["403"]}
+{"qid": "h05", "question": "什么情况下 DeepSeek 的硬盘缓存不会命中", "expect_chunk": "09ef360777ad-0001", "expect_source": "deepseek", "type": "boundary", "expect_any": ["前缀"]}
+{"qid": "h06", "question": "百炼的免费额度有效期从哪天开始算", "expect_chunk": "f64fae639142-0000", "expect_source": "bailian", "type": "boundary", "expect_any": ["90 天"]}
+{"qid": "h07", "question": "百炼的文档解析服务里，哪一档不保留原始图片", "expect_chunk": "980579feb312-0011", "expect_source": "bailian", "type": "boundary", "expect_any": ["不保留图片"]}
+{"qid": "h08", "question": "免费额度用完之后，百炼和智谱的处理方式有什么不同", "expect_chunk": "f64fae639142-0003", "expect_source": "bailian", "type": "conflict", "expect_any": ["停止响应"], "expect_chunks": ["f64fae639142-0003", "c3089cfb6d10-0003"]}
+{"qid": "h09", "question": "百炼的限流除了 RPM 和 TPM，还可能按什么粒度执行", "expect_chunk": "24154652d880-0001", "expect_source": "bailian", "type": "conflict", "expect_any": ["RPS"]}
+{"qid": "h10", "question": "智谱 Batch 调用里 GLM-4-Flash 的额度是多少次", "expect_chunk": "f05c8ec30d12-0002", "expect_source": "zhipu", "type": "term", "expect_any": ["1000 万次"]}
+{"qid": "h11", "question": "智谱为什么要对 API 调用做速率限制", "expect_chunk": "afb23b5c7d34-0000", "expect_source": "zhipu", "type": "semantic", "expect_any": ["稳定性"]}
+{"qid": "h12", "question": "怎么避免百炼账户欠费停服", "expect_chunk": "661882d5cf94-0002", "expect_source": "bailian", "type": "semantic", "expect_any": ["费用告警"]}
+{"qid": "h13", "question": "百炼支持用哪些方式充值", "expect_chunk": "f64fae639142-0006", "expect_source": "bailian", "type": "term", "expect_any": ["支付宝"]}
+{"qid": "h14", "question": "在哪里能查到百炼各模型还剩多少免费额度", "expect_chunk": "f64fae639142-0002", "expect_source": "bailian", "type": "semantic", "expect_any": ["余量"]}
+{"qid": "h15", "question": "不同用户在 DeepSeek 的缓存会不会互相看到", "expect_chunk": "09ef360777ad-0002", "expect_source": "deepseek", "type": "semantic", "expect_any": ["独立"]}
+{"qid": "h16", "question": "智谱模型访问量过大时会得到什么提示", "expect_chunk": "afb23b5c7d34-0004", "expect_source": "zhipu", "type": "term", "expect_any": ["访问量过大"]}
+{"qid": "h17", "question": "触发百炼限流后，第一步应该做什么", "expect_chunk": "24154652d880-0001", "expect_source": "bailian", "type": "semantic", "expect_any": ["判断"]}
+{"qid": "h18", "question": "DeepSeek 硬盘缓存上线后要不要改代码", "expect_chunk": "3c38c79b63bb-0000", "expect_source": "deepseek", "type": "boundary", "expect_any": ["无需修改代码"]}
+{"qid": "h19", "question": "百炼千问模型的限流条件是超出什么就触发", "expect_chunk": "24154652d880-0054", "expect_source": "bailian", "type": "term", "expect_any": ["限流条件"]}
+{"qid": "h20", "question": "智谱套餐额度耗尽后，需要等多久才能恢复", "expect_chunk": "c3089cfb6d10-0003", "expect_source": "zhipu", "type": "term", "expect_any": ["5 小时"]}
+{"qid": "h21", "question": "百炼新人免费额度是怎么发放的", "expect_chunk": "f64fae639142-0000", "expect_source": "bailian", "type": "semantic", "expect_any": ["自动"]}
+{"qid": "m001", "question": "这段内容里，箭头图标使用的遮罩图片地址中，文件名包含哪些关键字母？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "term", "expect_any": ["arrow-down-left", "arrow-down-left.svg"]}
+{"qid": "m002", "question": "所有 token 的总数等于哪两类 token 数量相加？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "term", "expect_any": ["prompt", "completion"]}
+{"qid": "m003", "question": "使用 DeepSeek 的 FIM 补全功能时，需要把 base_url 设置成哪个地址？", "expect_chunk": "0cf4cc365732-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["https://api.deepseek.com/beta", "beta"]}
+{"qid": "m004", "question": "使用 Token Plan 时，中国香港地域的 Anthropic 兼容地址是什么？", "expect_chunk": "00b84be55590-0006", "expect_source": "bailian", "type": "term", "expect_any": ["https://trial.cn-hongkong.maas.aliyuncs.com/apps/anthropic", "中国香港"]}
+{"qid": "m005", "question": "在兼容端点中，列表分页默认的 limit 值是多少，允许的最大值又是多少？", "expect_chunk": "b74fd9095937-0004", "expect_source": "deepseek", "type": "term", "expect_any": ["1000", "20"]}
+{"qid": "m006", "question": "在示例中，高速模式相比标准模式的 TPS 提升到了多少倍？", "expect_chunk": "dcd1781681dd-0002", "expect_source": "bailian", "type": "term", "expect_any": ["1.5~2", "1.5-2", "1.5到2"]}
+{"qid": "m007", "question": "GLM Coding Plan 的套餐采用什么样的用量限制机制？", "expect_chunk": "c3089cfb6d10-0000", "expect_source": "zhipu", "type": "term", "expect_any": ["每 5 小时限额", "每周限额"]}
+{"qid": "m008", "question": "最小计费为分钟的小时单价，和最小计费为天的包月单价，分别对应哪种计费方式？", "expect_chunk": "0d8226f12005-0036", "expect_source": "bailian", "type": "term", "expect_any": ["小时", "分钟", "包月", "天"]}
+{"qid": "m009", "question": "在知识检索完成后，如何查看详细的召回结果？", "expect_chunk": "5300d35e278d-0010", "expect_source": "zhipu", "type": "term", "expect_any": ["完成知识检索", "下拉箭头"]}
+{"qid": "m010", "question": "在这些取值里，哪些情况下 disable_parallel_tool_use 会被忽略？", "expect_chunk": "9cce2f8809c6-0003", "expect_source": "deepseek", "type": "term", "expect_any": ["auto", "any", "tool"]}
+{"qid": "m011", "question": "训练Token总量是怎么计算的？", "expect_chunk": "0d8226f12005-0013", "expect_source": "bailian", "type": "term", "expect_any": ["计费时长", "总时长", "max_pixels", "n_epochs"]}
+{"qid": "m012", "question": "在指定使用的模型时，可选的模型 ID 有哪两个？", "expect_chunk": "34ab59c2706c-0001", "expect_source": "deepseek", "type": "term", "expect_any": ["deepseek-flash", "deepseek-v4-pro"]}
+{"qid": "m013", "question": "qwen-image-3.0-pro 模型的任务下发接口每分钟最多调用多少次？", "expect_chunk": "24154652d880-0104", "expect_source": "bailian", "type": "term", "expect_any": ["5 次/分钟", "5次"]}
+{"qid": "m014", "question": "在 High 档位下，GLM-5.3 每项任务平均输出约多少 Token 时准确率达到 31.4%？", "expect_chunk": "b41a431f2f99-0009", "expect_source": "zhipu", "type": "term", "expect_any": ["5万", "5 万"]}
+{"qid": "m015", "question": "当某个 token 的输出概率极小、不在 top 20 最可能输出的 token 中时，它的对数概率值是多少？", "expect_chunk": "10fdf9e66590-0016", "expect_source": "deepseek", "type": "term", "expect_any": ["-9999.0", "-9999"]}
+{"qid": "m016", "question": "这些模型的每分钟调用次数上限是多少？", "expect_chunk": "24154652d880-0065", "expect_source": "bailian", "type": "term", "expect_any": ["600", "RPM"]}
+{"qid": "m017", "question": "已经安装过 OpenClaw 的用户，可以通过哪个命令重新进入配置阶段？", "expect_chunk": "5c92f6f5001b-0000", "expect_source": "deepseek", "type": "term", "expect_any": ["onboard", "install-daemon"]}
+{"qid": "m018", "question": "哪些工具属于 Skill 类，需要在配置文件开头添加 YAML front matter？", "expect_chunk": "6b990ae979d7-0003", "expect_source": "bailian", "type": "term", "expect_any": ["Codex", "Qwen Code", "OpenClaw", "Hermes Agent", "Qoder"]}
+{"qid": "m019", "question": "这个图标的遮罩是否允许重复？", "expect_chunk": "e259f4040b0b-0004", "expect_source": "zhipu", "type": "term", "expect_any": ["no-repeat", "不重复"]}
+{"qid": "m020", "question": "用户发送中断后，运行中的命令如果在宽限期内没有自行结束，会在大约多少秒后被强制终止？", "expect_chunk": "d1c6bd0316d2-0011", "expect_source": "zhipu", "type": "term", "expect_any": ["3 秒", "3秒", "约 3 秒"]}
+{"qid": "m021", "question": "自定义 user_id 的可选字符集是什么，最大长度是多少？", "expect_chunk": "10fdf9e66590-0012", "expect_source": "deepseek", "type": "term", "expect_any": ["a-zA-Z0-9\\-_", "512"]}
+{"qid": "m022", "question": "qwen3-coder-flash 模型每分钟最多允许调用多少次？", "expect_chunk": "24154652d880-0049", "expect_source": "bailian", "type": "term", "expect_any": ["1,200", "1200"]}
+{"qid": "m023", "question": "发起调用前需要准备好哪两样东西？", "expect_chunk": "8aaa2d602335-0009", "expect_source": "zhipu", "type": "term", "expect_any": ["API Key", "模型"]}
+{"qid": "m024", "question": "DeepSeek V4.1 Flash 的闲时价格是高峰时段价格的多少？", "expect_chunk": "ec90a2c3e901-0002", "expect_source": "deepseek", "type": "term", "expect_any": ["一半", "50%"]}
+{"qid": "m025", "question": "在720P分辨率下，有声视频每秒比无声视频贵多少元？", "expect_chunk": "4f93e19bacec-0285", "expect_source": "bailian", "type": "term", "expect_any": ["0.53", "0.27", "0.26"]}
+{"qid": "m026", "question": "在 Deep Code 中按哪个键可以中断当前模型的回复？", "expect_chunk": "db0f32072dcf-0001", "expect_source": "deepseek", "type": "semantic", "expect_any": ["Esc", "中断"]}
+{"qid": "m027", "question": "Harness 服务调用失败时，超出免费额度的部分是怎么计费的？", "expect_chunk": "8a8a2ddbedf4-0003", "expect_source": "bailian", "type": "semantic", "expect_any": ["折扣价", "按量账单"]}
+{"qid": "m028", "question": "在这段界面代码里，输出卡片图标所用的遮罩图像地址里包含了哪个查询参数值？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "semantic", "expect_any": ["max", "auto", "format"]}
+{"qid": "m029", "question": "在流式返回中，每个 chat completion chunk 对象里包含哪个用于标识该对话的唯一字段？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "semantic", "expect_any": ["唯一标识符", "对话"]}
+{"qid": "m030", "question": "qwen3-coder-480b-a35b-instruct 每分钟消耗 Token 数的限流上限是多少？", "expect_chunk": "24154652d880-0075", "expect_source": "bailian", "type": "semantic", "expect_any": ["1,000,000", "1000000"]}
+{"qid": "m031", "question": "文档里提到的 LangChain 集成是用来做什么的？", "expect_chunk": "197be800b64a-0009", "expect_source": "zhipu", "type": "semantic", "expect_any": ["构建复杂的 AI 应用", "智能代理"]}
+{"qid": "m032", "question": "使用 DeepSeek 的 FIM 补全功能时，需要把 base_url 设置成什么？", "expect_chunk": "0cf4cc365732-0000", "expect_source": "deepseek", "type": "semantic", "expect_any": ["beta", "api.deepseek.com/beta"]}
+{"qid": "m033", "question": "Token Plan 的专属 API Key 只能用在什么场景，不能用于什么用途？", "expect_chunk": "00b84be55590-0006", "expect_source": "bailian", "type": "semantic", "expect_any": ["Claude Code", "后端服务"]}
+{"qid": "m034", "question": "在兼容端点中，列表分页支持的游标参数是哪两个且关系如何？", "expect_chunk": "b74fd9095937-0004", "expect_source": "deepseek", "type": "semantic", "expect_any": ["after_id", "before_id", "互斥"]}
+{"qid": "m035", "question": "在华北2（北京）区域，以200输入加100输出kTPM、1天为例，高速模式的TPS是标准模式的多少倍？", "expect_chunk": "dcd1781681dd-0002", "expect_source": "bailian", "type": "semantic", "expect_any": ["1.5", "2", "1.5~2"]}
+{"qid": "m036", "question": "GLM Coding Plan 套餐采用什么样的用量额度限制机制？", "expect_chunk": "c3089cfb6d10-0000", "expect_source": "zhipu", "type": "semantic", "expect_any": ["每 5 小时限额", "每周限额"]}
+{"qid": "m037", "question": "知识检索失败或结果为空时，系统会基于什么给出回答？", "expect_chunk": "5300d35e278d-0010", "expect_source": "zhipu", "type": "semantic", "expect_any": ["模型自身知识库", "自身知识库"]}
+{"qid": "m038", "question": "训练Token总量的计算公式里，n_epochs这个超参数表示什么？", "expect_chunk": "0d8226f12005-0013", "expect_source": "bailian", "type": "semantic", "expect_any": ["循环次数", "创建微调任务时配置"]}
+{"qid": "m039", "question": "在深色模式下，这个图标容器的背景颜色使用哪个样式变体？", "expect_chunk": "90bf1d0b5b79-0012", "expect_source": "zhipu", "type": "semantic", "expect_any": ["primary-light", "深色模式", "bg-primary-light"]}
+{"qid": "m040", "question": "这个接口支持的模型 ID 有哪两个可选值？", "expect_chunk": "34ab59c2706c-0001", "expect_source": "deepseek", "type": "semantic", "expect_any": ["deepseek-flash", "deepseek-v4-pro"]}
+{"qid": "m041", "question": "DeepSeek R1 最新小版本升级后，用户如何启用其深度思考功能，而百炼平台 qwen3.5-397b-a17b 在 128K 以内、思考模式下的输入和输出单价分别是多少？", "expect_chunk": "b0b4e3554381-0000", "expect_source": "deepseek", "type": "multi", "expect_any": ["DeepSeek-R1-0528", "深度思考", "qwen3.5-397b-a17b", "1.2元", "7.2元"], "expect_chunks": ["b0b4e3554381-0000", "4f93e19bacec-0144"]}
+{"qid": "m042", "question": "对比阿里云百炼与DeepSeek开放平台，两家在2025年关于API服务的限流与计费调整分别有哪些具体安排？", "expect_chunk": "24154652d880-0116", "expect_source": "bailian", "type": "multi", "expect_any": ["qwen-tts", "RPM", "2025年9月6日", "价格调整"], "expect_chunks": ["24154652d880-0116", "01bd83a657d0-0003"]}
+{"qid": "m043", "question": "智谱GLM-5.3在编程能力上较前代提升了多少、其提升主要来自哪个训练阶段，以及阿里云百炼平台中qwen3-vl-plus模型的每分钟调用次数和每分钟消耗Token数限流分别是多少？", "expect_chunk": "b41a431f2f99-0000", "expect_source": "zhipu", "type": "multi", "expect_any": ["GLM-5.3", "后训练", "50%", "qwen3-vl-plus", "3,000", "5,000,000"], "expect_chunks": ["b41a431f2f99-0000", "24154652d880-0031"]}
+{"qid": "m044", "question": "在智谱平台解析结果的下载有效期是多久，而在百炼平台的视频生成模型中，kling/kling-v3-video-generation 生成 4K 有声视频的输出单价是多少？", "expect_chunk": "980579feb312-0006", "expect_source": "zhipu", "type": "multi", "expect_any": ["24小时", "3.0元/秒"], "expect_chunks": ["980579feb312-0006", "4f93e19bacec-0298"]}
+{"qid": "m045", "question": "在模型调用与工具配置上，deepseek 对并行工具使用的禁用参数在各取值下分别如何处理，而百炼平台所列模型各自支持哪些能力类型且其内置工具通过什么接口自动触发并按什么方式计费？", "expect_chunk": "9cce2f8809c6-0003", "expect_source": "deepseek", "type": "multi", "expect_any": ["disable_parallel_tool_use", "被忽略", "推理模型", "文本生成", "Responses API", "Credits"], "expect_chunks": ["9cce2f8809c6-0003", "1e7925456a29-0003"]}
+{"qid": "m046", "question": "在计费与工具调用机制上，bailian 的 kimi 系列模型按什么方式计费且哪些地域才有免费额度，而 deepseek 的 DeepSeek-V3.2 思考模式下工具调用时用户需要如何回传与删除思维链内容？", "expect_chunk": "4f93e19bacec-0183", "expect_source": "bailian", "type": "multi", "expect_any": ["输入Token和输出Token计费", "华北2（北京）", "reasoning_content", "删除之前的思维链"], "expect_chunks": ["4f93e19bacec-0183", "befe2a8f5e41-0005"]}
+{"qid": "m047", "question": "DeepSeek在R1开源时对授权协议做了哪些调整，而智谱AI在集成大模型应用时从性能、错误、内存和安全四个方面分别给出了哪些最佳实践建议？", "expect_chunk": "0562ce4b4b93-0002", "expect_source": "deepseek", "type": "multi", "expect_any": ["MIT", "模型蒸馏", "缓存", "重试", "内存", "API密钥"], "expect_chunks": ["0562ce4b4b93-0002", "d1ccc74e7725-0008"]}
+{"qid": "m048", "question": "在配置 DeepSeek 时，Linux/Mac 用户和 Windows 用户分别用什么命令设置 API Key 环境变量，而智谱 GLM 系列中哪款模型具备原生理解图片视频并生成可交互代码的多模态能力？", "expect_chunk": "60e8c8dda173-0002", "expect_source": "deepseek", "type": "multi", "expect_any": ["export", "env", "GLM-5.3-Flash"], "expect_chunks": ["60e8c8dda173-0002", "9bfc1f3daf1a-0003"]}
+{"qid": "m049", "question": "百炼平台列出的 qwen2.5 系列模型限流规则与智谱平台强调的函数设计原则之间，各自分别要求或说明了什么？", "expect_chunk": "24154652d880-0165", "expect_source": "bailian", "type": "multi", "expect_any": ["限流", "函数设计原则"], "expect_chunks": ["24154652d880-0165", "a6958400eb7c-0002"]}
+{"qid": "m050", "question": "在智谱 Coding Agent 中用 @ 引用文件、目录或 MCP 资源时，与 DeepSeek 输出 token 对数概率信息中 top_logprobs 提到的 -9999.0 所表示的含义分别是什么？", "expect_chunk": "ca47d775035e-0013", "expect_source": "zhipu", "type": "multi", "expect_any": ["引用文件", "引用目录", "MCP 资源", "对数概率", "-9999.0", "top 20"], "expect_chunks": ["ca47d775035e-0013", "10fdf9e66590-0020"]}
+{"qid": "m051", "question": "在优化大模型应用的延迟与输出控制时，deepseek 的什么参数能在思考模式下调节输出随机性且有效范围受限，而 zhipu 又建议从哪些角度排查无关上下文与可并行/可缓存环节来降低延迟？", "expect_chunk": "34ab59c2706c-0008", "expect_source": "deepseek", "type": "multi", "expect_any": ["思考模式", "随机性", "上下文", "并行", "缓存"], "expect_chunks": ["34ab59c2706c-0008", "0bbc5079cf31-0016"]}
+{"qid": "m052", "question": "bailian 上 glm-5.3 与 glm-5.1 的输入、输出每百万 Token 单价分别是多少，以及 zhipu 文档提到该模型具备哪项实时交互能力？", "expect_chunk": "4f93e19bacec-0187", "expect_source": "bailian", "type": "multi", "expect_any": ["glm-5.3", "glm-5.1", "8元", "28元", "6元", "24元", "实时流式响应", "流式"], "expect_chunks": ["4f93e19bacec-0187", "90bf1d0b5b79-0010"]}
+{"qid": "m053", "question": "在什么情况下，从剪贴板粘贴图片到 Deep Code 会不生效或无法成功？", "expect_chunk": "db0f32072dcf-0001", "expect_source": "deepseek", "type": "boundary", "expect_any": ["剪贴板", "图片", "Ctrl+V", "不成立"]}
+{"qid": "m054", "question": "在什么情况下，已有的用量包不能用来抵扣 Harness 服务的消耗？", "expect_chunk": "8a8a2ddbedf4-0003", "expect_source": "bailian", "type": "boundary", "expect_any": ["用量包", "Harness", "不能", "独立核算"]}
+{"qid": "m055", "question": "这段内容中的图标遮罩效果是否在深色模式或响应式尺寸下一定成立？", "expect_chunk": "015fa13d6aeb-0014", "expect_source": "zhipu", "type": "boundary", "expect_any": ["深色模式", "响应式", "尺寸", "限制"]}
+{"qid": "m056", "question": "在什么条件下，用户提示词中的 token 不会被计入上下文缓存命中，而会归入未命中的部分？", "expect_chunk": "10fdf9e66590-0018", "expect_source": "deepseek", "type": "boundary", "expect_any": ["未命中", "缓存", "prompt_cache_miss_tokens"]}
+{"qid": "m057", "question": "qwen3-coder-next 模型在欧盟以外的地区调用时，是否会受到每分钟调用次数或Token消耗量的限流？", "expect_chunk": "24154652d880-0075", "expect_source": "bailian", "type": "boundary", "expect_any": ["欧盟", "服务部署范围", "限流"]}
+{"qid": "m058", "question": "这段卡片导航所介绍的迁移与集成方案，在什么情况下并不适用或无法发挥作用？", "expect_chunk": "197be800b64a-0009", "expect_source": "zhipu", "type": "boundary", "expect_any": ["非现有应用", "非 LangChain", "复杂 AI 应用", "智能代理"]}
+{"qid": "m059", "question": "如果把这个接口用于后端服务而不是在 Claude Code、Codex 等工具中交互式使用，是否还能正常使用？", "expect_chunk": "00b84be55590-0006", "expect_source": "bailian", "type": "boundary", "expect_any": ["不能", "后端服务", "交互式"]}
+{"qid": "m060", "question": "这段文档片段描述的是一个卡片组件，当缺少哪些必要属性时，它就无法正常显示或跳转到对应页面？", "expect_chunk": "36db727c4a82-0029", "expect_source": "zhipu", "type": "boundary", "expect_any": ["title", "href", "icon"]}
+{"qid": "m061", "question": "在什么情况下，使用 after_id 或 before_id 进行列表分页会不适用或无法生效？", "expect_chunk": "b74fd9095937-0004", "expect_source": "deepseek", "type": "boundary", "expect_any": ["互斥", "不能同时使用", "after_id", "before_id"]}
+{"qid": "m062", "question": "在什么情况下，文档中提到的标准模式与高速模式的预付费价格示例会不再适用或无法直接套用？", "expect_chunk": "dcd1781681dd-0002", "expect_source": "bailian", "type": "boundary", "expect_any": ["示例", "华北2（北京）", "Qwen3.8-Max", "200 输入 + 100 输出", "1 天"]}
+{"qid": "m063", "question": "在快捷键设置上，DeepSeek 与智谱两家有哪些不同？", "expect_chunk": "db0f32072dcf-0001", "expect_source": "deepseek", "type": "conflict", "expect_any": ["快捷键", "按键", "不同"], "expect_chunks": ["db0f32072dcf-0001", "015fa13d6aeb-0014"]}
+{"qid": "m064", "question": "同样是涉及智能体或模型服务的平台文档，zhipu 片段与 bailian 片段在核心介绍对象和内容侧重上有什么不同？", "expect_chunk": "77a4c8d25872-0001", "expect_source": "zhipu", "type": "conflict", "expect_any": ["zhipu", "bailian", "Agent", "限流", "环境", "模型"], "expect_chunks": ["77a4c8d25872-0001", "24154652d880-0073"]}
+{"qid": "m065", "question": "在文件有效期的规则上，zhipu 和 deepseek 两家平台有什么不同？", "expect_chunk": "8aaa2d602335-0005", "expect_source": "zhipu", "type": "conflict", "expect_any": ["有效期", "过期", "永久", "时长"], "expect_chunks": ["8aaa2d602335-0005", "c6247723a990-0000"]}
+{"qid": "m066", "question": "在开发环境要求和流式响应事件机制上，智谱与DeepSeek两家分别有什么不同？", "expect_chunk": "842f974d542e-0005", "expect_source": "zhipu", "type": "conflict", "expect_any": ["Python", "事件", "模块化", "response.created"], "expect_chunks": ["842f974d542e-0005", "b01f280af8c4-0001"]}
+{"qid": "m067", "question": "在API Key创建时对可调用模型范围的控制上，阿里云百炼和智谱两家分别是怎么规定的？", "expect_chunk": "0ac8922c54db-0000", "expect_source": "bailian", "type": "conflict", "expect_any": ["阿里云百炼", "智谱", "API Key", "模型范围"], "expect_chunks": ["0ac8922c54db-0000", "b6cd6cb3c6b7-0009"]}
+{"qid": "m068", "question": "阿里云百炼和智谱在限制或免责条款上的规定有什么主要不同？", "expect_chunk": "24154652d880-0147", "expect_source": "bailian", "type": "conflict", "expect_any": ["限流", "免责"], "expect_chunks": ["24154652d880-0147", "df92c86b26e1-0031"]}
+{"qid": "m069", "question": "在模型调用与参数设置方面，zhipu 和 deepseek 两家平台有哪些不同？", "expect_chunk": "6b631811c34b-0011", "expect_source": "zhipu", "type": "conflict", "expect_any": ["zhipu", "deepseek", "模型调用", "参数"], "expect_chunks": ["6b631811c34b-0011", "10fdf9e66590-0003"]}
+{"qid": "m070", "question": "在模型计费与限流规则上，智谱和百炼两家平台分别侧重按什么方式计费、以及按什么条件触发限流？", "expect_chunk": "128bac924861-0002", "expect_source": "zhipu", "type": "conflict", "expect_any": ["Token", "限流"], "expect_chunks": ["128bac924861-0002", "24154652d880-0049"]}

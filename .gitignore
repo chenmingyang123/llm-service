@@ -1,0 +1,22 @@
+.env
+.cost_ledger.jsonl
+logs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+.idea/
+.vscode/
+.DS_Store
+# 语料与向量是大文件，不进仓库；但评测集是手写资产，必须版本化。
+# 注意写法：忽略 data 的"内容"而不是 data 目录本身 ——
+# 写成 data/ 的话，git 根本不会进去看，后面的 !data/eval/ 就失效了。
+data/*
+!data/eval/
+!data/eval/*.jsonl
+/notebooks/*
+# Milvus Lite 的库文件（每次建索引都会留下一个带时间戳的 collection，
+# 攒几天就是好几百 MB，不该进仓库）
+*.db

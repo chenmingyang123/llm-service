@@ -1,0 +1,48 @@
+{
+ "generated_at": "2026-09-25 16:14:24",
+ "golden": 50,
+ "topk": 5,
+ "pool": 50,
+ "rerank": "identity",
+ "rows": [
+  {
+   "mode": "vector",
+   "n": 50,
+   "recall@5": 0.6,
+   "faithfulness_floor": 0.9365079365079365,
+   "abstain_rate": 0.16,
+   "multi_all_hit": 0.0,
+   "lat_p50_ms": 1166.0379999957513,
+   "lat_p95_ms": 1673.8159999949858,
+   "lat_max_ms": 2359.1163999808487,
+   "cost_avg_cny": 0.00097478,
+   "cost_total_cny": 0.048739
+  },
+  {
+   "mode": "bm25",
+   "n": 50,
+   "recall@5": 0.64,
+   "faithfulness_floor": 0.9722222222222222,
+   "abstain_rate": 0.28,
+   "multi_all_hit": 0.25,
+   "lat_p50_ms": 706.0941999952774,
+   "lat_p95_ms": 1122.3215000063647,
+   "lat_max_ms": 1263.9683999877889,
+   "cost_avg_cny": 0.00084048,
+   "cost_total_cny": 0.042024
+  },
+  {
+   "mode": "hybrid",
+   "n": 50,
+   "recall@5": 0.66,
+   "faithfulness_floor": 0.9875,
+   "abstain_rate": 0.2,
+   "multi_all_hit": 0.0,
+   "lat_p50_ms": 1054.8078000138048,
+   "lat_p95_ms": 1464.569500007201,
+   "lat_max_ms": 1949.0408999845386,
+   "cost_avg_cny": 0.000877,
+   "cost_total_cny": 0.04385
+  }
+ ]
+}

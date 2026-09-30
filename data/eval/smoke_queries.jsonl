@@ -1,0 +1,8 @@
+{"qid": "s01", "question": "DeepSeek 的上下文硬盘缓存，最小命中前缀是多少 token", "expect_source": "deepseek", "expect_any": ["64 token", "64 Token"]}
+{"qid": "s02", "question": "怎么关闭 DeepSeek 的思考模式", "expect_source": "deepseek", "expect_any": ["disabled", "thinking"]}
+{"qid": "s03", "question": "阿里百炼的 base_url 要怎么拼", "expect_source": "bailian", "expect_any": ["compatible-mode", "dashscope"]}
+{"qid": "s04", "question": "tool_choice 在思考模式下能不能用", "expect_source": "deepseek", "expect_any": ["tool_choice", "思考模式"]}
+{"qid": "s05", "question": "智谱的文本向量 embedding 模型叫什么", "expect_source": "zhipu", "expect_any": ["embedding-3", "embedding"]}
+{"qid": "s06", "question": "GLM 的上下文缓存命中怎么计费", "expect_source": "zhipu", "expect_any": ["缓存命中", "缓存"]}
+{"qid": "s07", "question": "Files API 上传单个文件最大支持多大", "expect_source": "deepseek", "expect_any": ["64 MiB", "MiB"]}
+{"qid": "s08", "question": "智谱免费模型的并发限制是多少", "expect_source": "zhipu", "expect_any": ["并发"]}

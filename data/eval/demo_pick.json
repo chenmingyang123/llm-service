@@ -1,0 +1,866 @@
+{
+  "generated_at": "2026-09-27 22:41:39",
+  "cross_doc": [
+    {
+      "qid": "h01",
+      "question": "DeepSeek 的硬盘缓存是怎么触发的，百炼的免费额度用完即停又是什么表现",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "DeepSeek 的每一个请求都会触发硬盘缓存的构建 [1]。用户的每一个请求都会触发硬盘缓存的构建，若后续请求与之前的请求在前缀上存在重复，则重复部分只需要从缓存中拉取，计入\"缓存命中\"[1]。缓存命中的前提是相应前缀已被\"落盘\"（写入硬盘缓存）[1]。后续请求只有在完整匹配缓存前缀单元时，才能命中缓存 [1]。只有当两个请求的前缀内容相同时（从第 0 个 token 开始相同），才算重复，中间开始的重复不能被缓存命中 [3]。\n\n免费额度用完即停，开启此功能后，免费额度耗尽时将停止响应并返回 HTTP 403 错误，错误码为 AllocationQuota.FreeTierOnly，不会继续扣费 [5]。未完成实名认证的用户，系统默认强制开启用完即停模式，开关不可见且无法操作，完成实名认证后，可在控制台查看并自行切换该开关 [5]。若模型未显示开关，说明该模型免费额度已耗尽或过期，或模型本身不提供免费额度 [5]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "上下文硬盘缓存",
+          "chunk_id": "3c38c79b63bb-0000"
+        },
+        {
+          "n": 3,
+          "source": "deepseek",
+          "title": "DeepSeek API 创新采用硬盘缓存，价格再降一个数量级",
+          "chunk_id": "09ef360777ad-0001"
+        },
+        {
+          "n": 5,
+          "source": "bailian",
+          "title": "新人免费额度获取及用完即停开关规则-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "f64fae639142-0003"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "bailian"
+      ],
+      "used": [
+        1,
+        3,
+        5
+      ],
+      "unsupported": [],
+      "top_score": 0.031746,
+      "latency_ms": 2818.84,
+      "cost_cny": 0.002152,
+      "score": 8.5,
+      "why": [
+        "长度合适（415 字）",
+        "带 12 个数字，画面有信息点",
+        "引用 3 条，展开时画面不乱",
+        "两家都有实质引用（deepseek×2、bailian×1）"
+      ],
+      "expect_chunks": [
+        "09ef360777ad-0001",
+        "f64fae639142-0003"
+      ],
+      "expect_any": [
+        "硬盘缓存"
+      ]
+    },
+    {
+      "qid": "h03",
+      "question": "百炼的免费额度有效期是多久，智谱的套餐额度耗尽后要等多久恢复",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "百炼的免费额度有效期为90天，从开通阿里云百炼、模型发布或模型申请通过之日起计算（以较晚者为准）[1]。2025年9月8日11点前已开通阿里云百炼的用户，免费额度有效期可能不足90天；在此之后开通的用户有效期为90天[1]。GLM Coding Plan套餐额度耗尽后，需要等待下一个5小时周期恢复额度[2]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "bailian",
+          "title": "新人免费额度获取及用完即停开关规则-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "f64fae639142-0000"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "常见问题",
+          "chunk_id": "c3089cfb6d10-0003"
+        }
+      ],
+      "cited_sources": [
+        "bailian",
+        "zhipu"
+      ],
+      "used": [
+        1,
+        2
+      ],
+      "unsupported": [],
+      "top_score": 0.032522,
+      "latency_ms": 2014.92,
+      "cost_cny": 0.001464,
+      "score": 8.5,
+      "why": [
+        "长度合适（155 字）",
+        "带 18 个数字，画面有信息点",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（bailian×1、zhipu×1）"
+      ],
+      "expect_chunks": [
+        "f64fae639142-0000",
+        "c3089cfb6d10-0003"
+      ],
+      "expect_any": [
+        "90 天"
+      ]
+    },
+    {
+      "qid": "m043",
+      "question": "智谱GLM-5.3在编程能力上较前代提升了多少、其提升主要来自哪个训练阶段，以及阿里云百炼平台中qwen3-vl-plus模型的每分钟调用次数和每分钟消耗Token数限流分别是多少？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "GLM-5.3 的编程能力在智谱内部 Z.ai Code Bench 上较 GLM-5.2 提升了 50% [1][2]。它使用与 GLM-5.2 相同的基础模型，所有提升均来自后训练 [1]。阿里云百炼平台中 qwen3-vl-plus 模型的每分钟调用次数（RPM）限流为 6,000，每分钟消耗 Token 数（TPM）限流为 10,000,000 [3]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "zhipu",
+          "title": "GLM-5.3",
+          "chunk_id": "b41a431f2f99-0000"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "模型与产品发布记录",
+          "chunk_id": "28e396901136-0001"
+        },
+        {
+          "n": 3,
+          "source": "bailian",
+          "title": "限流-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "24154652d880-0032"
+        }
+      ],
+      "cited_sources": [
+        "zhipu",
+        "bailian"
+      ],
+      "used": [
+        1,
+        2,
+        3
+      ],
+      "unsupported": [],
+      "top_score": 0.032522,
+      "latency_ms": 2552.23,
+      "cost_cny": 0.000998,
+      "score": 8.5,
+      "why": [
+        "长度合适（182 字）",
+        "带 25 个数字，画面有信息点",
+        "引用 3 条，展开时画面不乱",
+        "两家都有实质引用（zhipu×2、bailian×1）"
+      ],
+      "expect_chunks": [
+        "b41a431f2f99-0000",
+        "24154652d880-0031"
+      ],
+      "expect_any": [
+        "GLM-5.3",
+        "后训练",
+        "50%"
+      ]
+    },
+    {
+      "qid": "m046",
+      "question": "在计费与工具调用机制上，bailian 的 kimi 系列模型按什么方式计费且哪些地域才有免费额度，而 deepseek 的 DeepSeek-V3.2 思考模式下工具调用时用户需要如何回传与删除思维链内容？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "kimi 系列模型按输入 Token 和输出 Token 计费 [2]，且仅在华北2（北京）地域下有免费额度，其他地域均无免费额度 [2]。DeepSeek-V3.2 思考模式下进行工具调用时，用户需回传思维链内容（reasoning_content）给 API，以让模型继续思考 [3]；在下一个用户问题开始时，需删除之前的思维链，并保留其它内容发送给 API [3]。",
+      "citations": [
+        {
+          "n": 2,
+          "source": "bailian",
+          "title": "阿里云百炼模型价格-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "4f93e19bacec-0180"
+        },
+        {
+          "n": 3,
+          "source": "deepseek",
+          "title": "DeepSeek V3.2 正式版：强化 Agent 能力，融入思考推理",
+          "chunk_id": "befe2a8f5e41-0005"
+        }
+      ],
+      "cited_sources": [
+        "bailian",
+        "deepseek"
+      ],
+      "used": [
+        2,
+        3
+      ],
+      "unsupported": [],
+      "top_score": 0.023796,
+      "latency_ms": 1860.78,
+      "cost_cny": 0.001768,
+      "score": 8.5,
+      "why": [
+        "长度合适（186 字）",
+        "带 7 个数字，画面有信息点",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（bailian×1、deepseek×1）"
+      ],
+      "expect_chunks": [
+        "4f93e19bacec-0183",
+        "befe2a8f5e41-0005"
+      ],
+      "expect_any": [
+        "输入Token和输出Token计费",
+        "华北2（北京）"
+      ]
+    },
+    {
+      "qid": "m048",
+      "question": "在配置 DeepSeek 时，Linux/Mac 用户和 Windows 用户分别用什么命令设置 API Key 环境变量，而智谱 GLM 系列中哪款模型具备原生理解图片视频并生成可交互代码的多模态能力？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "Linux / Mac 用户使用 export DEEPSEEK_API_KEY=\"<你的 DeepSeek API Key>\" 设置环境变量 [1]，Windows 用户使用 $env:DEEPSEEK_API_KEY=\"<你的 DeepSeek API Key>\" 设置环境变量 [1]。智谱 GLM 系列中具备原生理解图片视频并生成可交互代码的多模态能力的模型是 GLM-5.3-Flash [2][3]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "接入 Crush",
+          "chunk_id": "60e8c8dda173-0002"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "模型概览",
+          "chunk_id": "9bfc1f3daf1a-0003"
+        },
+        {
+          "n": 3,
+          "source": "zhipu",
+          "title": "模型概览",
+          "chunk_id": "9bfc1f3daf1a-0001"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "zhipu"
+      ],
+      "used": [
+        1,
+        2,
+        3
+      ],
+      "unsupported": [],
+      "top_score": 0.031319,
+      "latency_ms": 2519.92,
+      "cost_cny": 0.001423,
+      "score": 8.5,
+      "why": [
+        "长度合适（206 字）",
+        "带 6 个数字，画面有信息点",
+        "引用 3 条，展开时画面不乱",
+        "两家都有实质引用（deepseek×1、zhipu×2）"
+      ],
+      "expect_chunks": [
+        "60e8c8dda173-0002",
+        "9bfc1f3daf1a-0003"
+      ],
+      "expect_any": [
+        "export",
+        "env"
+      ]
+    },
+    {
+      "qid": "m050",
+      "question": "在智谱 Coding Agent 中用 @ 引用文件、目录或 MCP 资源时，与 DeepSeek 输出 token 对数概率信息中 top_logprobs 提到的 -9999.0 所表示的含义分别是什么？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "使用 `@` 可以快速包含文件或目录，无需等待 Coding Agent 读取它们 [1]；引用单个文件时会在对话中包含文件的完整内容 [1]，引用目录时会提供带有文件信息的目录列表 [1]，引用 MCP 资源时资料仅给出代码示例、未说明其含义 [1]。关于 -9999.0，资料说明它代表该 token 的输出概率极小，不在 top 20 最可能输出的 token 中 [5]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "zhipu",
+          "title": "常用工作流",
+          "chunk_id": "ca47d775035e-0013"
+        },
+        {
+          "n": 5,
+          "source": "deepseek",
+          "title": "Chat Completions API",
+          "chunk_id": "10fdf9e66590-0020"
+        }
+      ],
+      "cited_sources": [
+        "zhipu",
+        "deepseek"
+      ],
+      "used": [
+        1,
+        5
+      ],
+      "unsupported": [],
+      "top_score": 0.030769,
+      "latency_ms": 2108.2,
+      "cost_cny": 0.001438,
+      "score": 8.5,
+      "why": [
+        "长度合适（190 字）",
+        "带 12 个数字，画面有信息点",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（zhipu×1、deepseek×1）"
+      ],
+      "expect_chunks": [
+        "ca47d775035e-0013",
+        "10fdf9e66590-0020"
+      ],
+      "expect_any": [
+        "引用目录",
+        "MCP 资源"
+      ]
+    },
+    {
+      "qid": "m051",
+      "question": "在优化大模型应用的延迟与输出控制时，deepseek 的什么参数能在思考模式下调节输出随机性且有效范围受限，而 zhipu 又建议从哪些角度排查无关上下文与可并行/可缓存环节来降低延迟？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "top_p 能在思考模式下调节输出随机性，其有效取值范围为 0.95–1.0，低于 0.95 的取值会按 0.95 处理 [1][3]。降低延迟时可从是否传入了无关历史对话、RAG 检索结果是否过多、是否去除了重复低相关或无效内容、重复上下文是否可以使用缓存、是否存在多个串行模型调用、是否可以合并相近任务、是否可以并行执行互不依赖的步骤、是否有简单规则本可以用程序逻辑完成、是否开启流式输出、前端是否展示生成状态、长任务是否展示阶段性进度、工具调用或检索过程是否有反馈等角度排查 [2]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "思考模式",
+          "chunk_id": "4e80ab907279-0002"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "优化模型返回速度",
+          "chunk_id": "0bbc5079cf31-0016"
+        },
+        {
+          "n": 3,
+          "source": "deepseek",
+          "title": "Responses API",
+          "chunk_id": "34ab59c2706c-0008"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "zhipu"
+      ],
+      "used": [
+        1,
+        3,
+        2
+      ],
+      "unsupported": [],
+      "top_score": 0.025098,
+      "latency_ms": 2223.9,
+      "cost_cny": 0.001395,
+      "score": 8.5,
+      "why": [
+        "长度合适（245 字）",
+        "带 14 个数字，画面有信息点",
+        "引用 3 条，展开时画面不乱",
+        "两家都有实质引用（deepseek×2、zhipu×1）"
+      ],
+      "expect_chunks": [
+        "34ab59c2706c-0008",
+        "0bbc5079cf31-0016"
+      ],
+      "expect_any": [
+        "思考模式",
+        "随机性"
+      ]
+    },
+    {
+      "qid": "m044",
+      "question": "DeepSeek-V3 在模型权重发布与推理部署上分别提供了哪些精度格式和支持方式，而智谱 Memory 接口在写入记忆条目时对路径和内容又分别有哪些格式与容量限制？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "DeepSeek-V3 采用 FP8 训练，并开源了原生 FP8 权重 [1]。SGLang 和 LMDeploy 第一时间支持了 V3 模型的原生 FP8 推理，TensorRT-LLM 和 MindIE 则实现了 BF16 推理 [1]。此外，提供了从 FP8 到 BF16 的转换脚本 [1]。Memory 接口写入记忆条目时，每条记忆由一个路径和一段文本组成，path 以 / 开头（NFC 归一化，≤1024 UTF-8 字节，不得为裸 /、不得含空段、.、.. 或控制字符），content 是 UTF-8 文本，默认上限 100 KiB [2]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "DeepSeek-V3 正式发布",
+          "chunk_id": "3ed7a8b7d5a4-0002"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "记忆",
+          "chunk_id": "856cead8ee2f-0001"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "zhipu"
+      ],
+      "used": [
+        1,
+        2
+      ],
+      "unsupported": [],
+      "top_score": 0.029877,
+      "latency_ms": 2301.94,
+      "cost_cny": 0.001435,
+      "score": 8.5,
+      "why": [
+        "长度合适（280 字）",
+        "带 23 个数字，画面有信息点",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（deepseek×1、zhipu×1）"
+      ],
+      "expect_chunks": [
+        "3ed7a8b7d5a4-0002",
+        "856cead8ee2f-0001"
+      ],
+      "expect_any": [
+        "FP8",
+        "BF16"
+      ]
+    },
+    {
+      "qid": "m042",
+      "question": "对比阿里云百炼与DeepSeek开放平台，两家在2025年关于API服务的限流与计费调整分别有哪些具体安排？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "DeepSeek 开放平台将于北京时间 2025 年 9 月 6 日凌晨起对 API 接口调用价格进行调整，9 月 6 日前所有 API 服务仍按原价格政策计费 [1]。阿里云百炼方面，资料中没有给出 2025 年关于 API 服务限流与计费调整的具体时间安排，只提到了吞吐预留的计费规则、价格、退费与容量换算规则 [2]，以及节省计划、资源包、Token Plan 等计费优惠方案 [5] 和多组模型的限流条件 [3][4]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "DeepSeek-V3.1 发布",
+          "chunk_id": "01bd83a657d0-0003"
+        },
+        {
+          "n": 2,
+          "source": "bailian",
+          "title": "吞吐预留计费规则与价格-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "dcd1781681dd-0000"
+        },
+        {
+          "n": 3,
+          "source": "bailian",
+          "title": "限流-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "24154652d880-0148"
+        },
+        {
+          "n": 4,
+          "source": "bailian",
+          "title": "限流-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "24154652d880-0147"
+        },
+        {
+          "n": 5,
+          "source": "bailian",
+          "title": "如何查询阿里云百炼节省计划和资源包账单-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "2a1bf0d8c5e3-0000"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "bailian"
+      ],
+      "used": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "unsupported": [],
+      "top_score": 0.02967,
+      "latency_ms": 2225.73,
+      "cost_cny": 0.00174,
+      "score": 7.0,
+      "why": [
+        "长度合适（214 字）",
+        "带 17 个数字，画面有信息点",
+        "引用 5 条",
+        "两家都有实质引用（deepseek×1、bailian×4）"
+      ],
+      "expect_chunks": [
+        "24154652d880-0116",
+        "01bd83a657d0-0003"
+      ],
+      "expect_any": [
+        "qwen-tts",
+        "RPM"
+      ]
+    },
+    {
+      "qid": "m041",
+      "question": "DeepSeek R1 最新小版本升级后，用户如何启用其深度思考功能，而百炼平台 qwen3.5-397b-a17b 在 128K 以内、思考模式下的输入和输出单价分别是多少？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "用户通过官方网站、APP 或小程序进入对话界面后，开启“深度思考”功能即可体验最新版本 [1]。qwen3.5-397b-a17b 在 0<Token≤128K、思考模式下的输入单价为 1.2 元（每百万Token），输出单价为 7.2 元（每百万Token）[2]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "DeepSeek-R1 更新，思考更深，推理更强",
+          "chunk_id": "b0b4e3554381-0000"
+        },
+        {
+          "n": 2,
+          "source": "bailian",
+          "title": "阿里云百炼模型价格-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "4f93e19bacec-0144"
+        }
+      ],
+      "cited_sources": [
+        "deepseek",
+        "bailian"
+      ],
+      "used": [
+        1,
+        2
+      ],
+      "unsupported": [],
+      "top_score": 0.029727,
+      "latency_ms": 2192.61,
+      "cost_cny": 0.001031,
+      "score": 6.5,
+      "why": [
+        "偏短（134 字）",
+        "带 17 个数字，画面有信息点",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（deepseek×1、bailian×1）"
+      ],
+      "expect_chunks": [
+        "b0b4e3554381-0000",
+        "4f93e19bacec-0144"
+      ],
+      "expect_any": [
+        "DeepSeek-R1-0528",
+        "深度思考"
+      ]
+    },
+    {
+      "qid": "h02",
+      "question": "智谱的速率限制和百炼的限流条件，分别是按什么维度限制的",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "智谱开放平台的速率限制是对单个账户或调用方的 API 并发请求数等进行限制 [2]。百炼按主账号维度对模型调用设置限流，账号下所有 RAM 子账号、业务空间和 API Key 的调用量合并计算 [1]。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "bailian",
+          "title": "限流-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "24154652d880-0000"
+        },
+        {
+          "n": 2,
+          "source": "zhipu",
+          "title": "速率限制",
+          "chunk_id": "afb23b5c7d34-0000"
+        }
+      ],
+      "cited_sources": [
+        "bailian",
+        "zhipu"
+      ],
+      "used": [
+        2,
+        1
+      ],
+      "unsupported": [],
+      "top_score": 0.025053,
+      "latency_ms": 1996.62,
+      "cost_cny": 0.000818,
+      "score": 4.5,
+      "why": [
+        "偏短（101 字）",
+        "数字偏少",
+        "引用 2 条，展开时画面不乱",
+        "两家都有实质引用（bailian×1、zhipu×1）"
+      ],
+      "expect_chunks": [
+        "afb23b5c7d34-0000",
+        "24154652d880-0054"
+      ],
+      "expect_any": [
+        "速率限制"
+      ]
+    },
+    {
+      "qid": "m045",
+      "question": "在模型调用与工具配置上，deepseek 对并行工具使用的禁用参数在各取值下分别如何处理，而百炼平台所列模型各自支持哪些能力类型且其内置工具通过什么接口自动触发并按什么方式计费？",
+      "abstained": true,
+      "abstain_reason": "检索不足：最相关的一条向量分 0.000，低于阈值 0.4",
+      "answer": "",
+      "citations": [],
+      "cited_sources": [],
+      "used": [],
+      "unsupported": [],
+      "top_score": 0.015873,
+      "latency_ms": 1591.68,
+      "cost_cny": 0.0,
+      "score": 0.0,
+      "why": [
+        "拒答了，不能用来演示跨文档"
+      ],
+      "expect_chunks": [
+        "9cce2f8809c6-0003",
+        "1e7925456a29-0003"
+      ],
+      "expect_any": [
+        "disable_parallel_tool_use",
+        "被忽略"
+      ]
+    },
+    {
+      "qid": "m047",
+      "question": "DeepSeek在R1开源时对授权协议做了哪些调整，而智谱AI在集成大模型应用时从性能、错误、内存和安全四个方面分别给出了哪些最佳实践建议？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "DeepSeek 在发布并开源 R1 的同时，在协议授权层面将模型开源 License 统一使用 MIT [1]；此前曾参考行业通行实践特别引入 DeepSeek License 为开源社区提供授权，但实践表明非标准的开源 License 可能反而增加开发者的理解成本 [1]；此次开源仓库（包括模型权重）统一采用标准化、宽松的 MIT License，完全开源，不限制商用，无需申请 [1]；产品协议明确可“模型蒸馏”，已更新线上产品的用户协议，明确允许用户利用模型输出、通过模型蒸馏等方式训练其他模型 [1]。\n\nNO_ANSWER\n资料中关于智谱AI仅提供了性能优化、成本控制、安全性、可靠性四方面的最佳实践，并未提供“错误”和“内存”两方面的最佳实践建议。",
+      "citations": [
+        {
+          "n": 1,
+          "source": "deepseek",
+          "title": "DeepSeek-R1 发布，性能对标 OpenAI o1 正式版",
+          "chunk_id": "0562ce4b4b93-0002"
+        }
+      ],
+      "cited_sources": [
+        "deepseek"
+      ],
+      "used": [
+        1
+      ],
+      "unsupported": [],
+      "top_score": 0.032787,
+      "latency_ms": 2496.19,
+      "cost_cny": 0.001341,
+      "score": 0.0,
+      "why": [
+        "只引用了 1 家（['deepseek']），跨文档主张不成立"
+      ],
+      "expect_chunks": [
+        "0562ce4b4b93-0002",
+        "d1ccc74e7725-0008"
+      ],
+      "expect_any": [
+        "MIT",
+        "模型蒸馏"
+      ]
+    },
+    {
+      "qid": "m049",
+      "question": "百炼平台列出的 qwen2.5 系列模型限流规则与智谱平台强调的函数设计原则之间，各自分别要求或说明了什么？",
+      "abstained": true,
+      "abstain_reason": "资料中没有智谱平台函数设计原则的任何具体内容，[4] 只给出了卡片标题和图标链接，未说明函数设计原则要求什么。",
+      "answer": "",
+      "citations": [],
+      "cited_sources": [],
+      "used": [
+        4
+      ],
+      "unsupported": [],
+      "top_score": 0.016393,
+      "latency_ms": 2156.19,
+      "cost_cny": 0.001199,
+      "score": 0.0,
+      "why": [
+        "拒答了，不能用来演示跨文档"
+      ],
+      "expect_chunks": [
+        "24154652d880-0165",
+        "a6958400eb7c-0002"
+      ],
+      "expect_any": [
+        "限流"
+      ]
+    },
+    {
+      "qid": "m052",
+      "question": "bailian 上 glm-5.3 与 glm-5.1 的输入、输出每百万 Token 单价分别是多少，以及 zhipu 文档提到该模型具备哪项实时交互能力？",
+      "abstained": false,
+      "abstain_reason": "",
+      "answer": "glm-5.3 在百炼上输入单价为 8元/百万Token，输出单价为 28元/百万Token，不区分阶梯 [4]。glm-5.1 在百炼上 0<Token≤32K 时输入 6元/百万Token、输出 24元/百万Token，32K<Token≤200K 时输入 8元/百万Token、输出 28元/百万Token [4]。\n\nNO_ANSWER\n资料中没有提到 zhipu 文档所述该模型的任何实时交互能力。",
+      "citations": [
+        {
+          "n": 4,
+          "source": "bailian",
+          "title": "阿里云百炼模型价格-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+          "chunk_id": "4f93e19bacec-0184"
+        }
+      ],
+      "cited_sources": [
+        "bailian"
+      ],
+      "used": [
+        4
+      ],
+      "unsupported": [],
+      "top_score": 0.032787,
+      "latency_ms": 2318.67,
+      "cost_cny": 0.001525,
+      "score": 0.0,
+      "why": [
+        "只引用了 1 家（['bailian']），跨文档主张不成立"
+      ],
+      "expect_chunks": [
+        "4f93e19bacec-0187",
+        "90bf1d0b5b79-0010"
+      ],
+      "expect_any": [
+        "glm-5.3",
+        "glm-5.1",
+        "8元",
+        "28元",
+        "6元",
+        "24元"
+      ]
+    }
+  ],
+  "abstain": [
+    {
+      "question": "企业版的年费是多少",
+      "abstained": true,
+      "abstain_reason": "资料中只给出了团队版各档位按月计费的价格（如标准座席原价 198 元/座席/月、高级座席原价 698 元/座席/月、尊享座席 1,398 元/座席/月、共享用量包 5,000 元/个/月），没有提供任何按年计费的年费信息。",
+      "top_score": 0.016393,
+      "answer": "",
+      "latency_ms": 2061.9,
+      "cost_cny": 0.001791,
+      "runs": [
+        {
+          "abstained": true,
+          "reason": "资料中没有提供任何企业版按年计费的价格信息，只给出了团队版各档位的月费定价。",
+          "top_score": 0.016393
+        },
+        {
+          "abstained": true,
+          "reason": "资料中没有企业版年费的信息，只有团队版各档位按月计费的坐席价格和用量包价格，未提及任何年费金额。",
+          "top_score": 0.016393
+        },
+        {
+          "abstained": true,
+          "reason": "资料中只给出了团队版各档位按月计费的价格（如标准座席原价 198 元/座席/月、高级座席原价 698 元/座席/月、尊享",
+          "top_score": 0.016393
+        }
+      ],
+      "score": 5.5,
+      "why": [
+        "3/3 次都走模型闸门 ★ 稳定且有说服力",
+        "拒答理由具体（平均 66 字，说明真读了资料）"
+      ]
+    },
+    {
+      "question": "有没有面向教育行业的优惠政策",
+      "abstained": true,
+      "abstain_reason": "资料中没有关于教育行业优惠政策的信息，只提到了教育行业文档解析能力和教育应用场景，未涉及任何优惠政策。",
+      "top_score": 0.026879,
+      "answer": "",
+      "latency_ms": 1982.56,
+      "cost_cny": 0.002246,
+      "runs": [
+        {
+          "abstained": true,
+          "reason": "资料中没有关于面向教育行业的优惠政策的信息，仅提到教育行业是解决方案覆盖的行业之一，以及限时优惠等一般性优惠措施，未说明",
+          "top_score": 0.026879
+        },
+        {
+          "abstained": true,
+          "reason": "资料中只提到教育行业属于行业垂直解决方案的适用领域 [3]，以及优惠措施的一般性说明 [5]，但没有说明是否存在专门面向",
+          "top_score": 0.026879
+        },
+        {
+          "abstained": true,
+          "reason": "资料中没有关于教育行业优惠政策的信息，只提到了教育行业文档解析能力和教育应用场景，未涉及任何优惠政策。",
+          "top_score": 0.026879
+        }
+      ],
+      "score": 5.5,
+      "why": [
+        "3/3 次都走模型闸门 ★ 稳定且有说服力",
+        "拒答理由具体（平均 66 字，说明真读了资料）"
+      ]
+    },
+    {
+      "question": "如果我的 API Key 泄露了，应该怎么找回",
+      "abstained": true,
+      "abstain_reason": "检索不足：最相关的一条向量分 0.000，低于阈值 0.4",
+      "top_score": 0.015385,
+      "answer": "",
+      "latency_ms": 1148.0,
+      "cost_cny": 0.001193,
+      "runs": [
+        {
+          "abstained": true,
+          "reason": "检索不足：最相关的一条向量分 0.000，低于阈值 0.4",
+          "top_score": 0.015385
+        },
+        {
+          "abstained": true,
+          "reason": "资料中没有说明 API Key 泄露后如何找回，只提到应妥善保管、不要泄露，以及账户或密码泄露时应联络客服。[2][3]",
+          "top_score": 0.015873
+        },
+        {
+          "abstained": true,
+          "reason": "检索不足：最相关的一条向量分 0.000，低于阈值 0.4",
+          "top_score": 0.015385
+        }
+      ],
+      "score": 2.0,
+      "why": [
+        "闸门不稳定（模型 1 / 检索 2）—— 录屏有风险",
+        "拒答理由具体（平均 39 字，说明真读了资料）"
+      ]
+    },
+    {
+      "question": "你们支持私有化部署吗",
+      "abstained": false,
+      "abstain_reason": "",
+      "top_score": 0.029387,
+      "answer": "支持。[2][3][4][5]",
+      "latency_ms": 2114.22,
+      "cost_cny": 0.00181,
+      "runs": [
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.031545
+        },
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.029387
+        },
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.029387
+        }
+      ],
+      "score": 0.0,
+      "why": [
+        "3 次里只有 0 次拒答 —— 会录到「它答了」的画面，不能用"
+      ]
+    },
+    {
+      "question": "开通服务需要签署合同吗",
+      "abstained": false,
+      "abstain_reason": "",
+      "top_score": 0.029462,
+      "answer": "签约方式包括线下签署合同、在在线订购页面点击确认，或以其他方式选择接受本协议（如实际使用本服务等）[3]。用户在注册流程中点击同意本协议并完成全部注册程序，即表示接受本协议并成为平台用户[2]。协议末尾的签署处系为满足部分客户签订协议的要求预留，双方未完成签署的不影响本协议的生效[1]。因此开通服务并非必须以签署合同为要件，在线点击确认或实际使用等方式也可以成立协议[1][2][3]。",
+      "latency_ms": 3182.57,
+      "cost_cny": 0.0045190000000000004,
+      "runs": [
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.029462
+        },
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.029462
+        },
+        {
+          "abstained": false,
+          "reason": "",
+          "top_score": 0.029462
+        }
+      ],
+      "score": 0.0,
+      "why": [
+        "3 次里只有 0 次拒答 —— 会录到「它答了」的画面，不能用"
+      ]
+    }
+  ]
+}
