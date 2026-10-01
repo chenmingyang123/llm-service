@@ -2,7 +2,9 @@
 name = "llm-service"
 version = "0.1.0"
 description = "LLM 接入层：多 provider、可降级、能报成本 —— 6 周冲刺 W1 项目"
-requires-python = ">=3.11"
+# 实测 3.10 / 3.13 都能跑（含 MCP Server 与全部测试）。
+# 原先写 >=3.11 是没验证过的门槛，会把 3.10 挡在门外 —— 别用未经验证的下界卡人。
+requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.141",
     "uvicorn[standard]>=0.53",

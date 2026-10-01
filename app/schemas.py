@@ -112,6 +112,7 @@ class AgentIn(BaseModel):
     provider: str = "deepseek"
     model: str | None = None
     max_tokens: int = 1024
+    trace: bool = False
 
 
 class BatchIn(BaseModel):
@@ -167,6 +168,10 @@ class ReactIn(BaseModel):
     provider: str = "deepseek"
     model: str | None = None
     max_tokens: int = 1024
+    trace: bool = Field(
+        False,
+        description="是否落一条 trace 到 data/traces/<trace_id>.jsonl（块 E）。"
+                    "默认关——排障和演示时再开，平时没必要多一次磁盘写入。")
 
 
 class ReactOut(BaseModel):
@@ -181,3 +186,4 @@ class ReactOut(BaseModel):
     usage: UsageOut = UsageOut()
     cost_cny: float = 0.0
     latency_s: float = 0.0
+    trace_id: str = Field("", description="本次运行的 trace id（仅 trace=true 时有值）")

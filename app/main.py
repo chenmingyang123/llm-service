@@ -19,6 +19,7 @@ from .confirm import ConfirmationRegistry
 from .cost import cache_stats, summarize
 from .cost_header import CostHeaderMiddleware
 from .llm import LLMError
+from .observe import Tracer, langfuse_exporter, make_trace_hook
 from .providers import all_provider_status
 from .resilience import FALLBACK_CHAIN, call_with_fallback
 from .pricing import MODEL_PRICES, breakeven, min_calls_for_saving, price_table
@@ -221,19 +222,37 @@ def agent_prompt_style(body: AgentIn):
           summary="手写 ReAct：纯文本协议的多步工具循环（不依赖原生 function calling）")
 def agent_react(body: ReactIn):
     """与 /agent 的区别不是「多了一个思考」，是**协议换了**。"""
+    tracer = None
+    if body.trace:
+        exp = langfuse_exporter()
+        tracer = Tracer(name="agent.react", task=body.question,
+                        exporters=[exp] if exp else [])
+
     try:
-        return run_react(
+        out = run_react(
             settings,
             task=body.question,
             max_steps=body.max_steps,
             provider=body.provider,
             model=body.model,
             max_tokens=body.max_tokens,
+            on_event=make_trace_hook(tracer, task=body.question) if tracer else None,
         )
     except ReactBudgetExceeded as e:
         raise HTTPException(status_code=429, detail=str(e)) from None
     except LLMError as e:
         raise HTTPException(status_code=502, detail=str(e)) from None
+
+    if tracer is not None:
+        tracer.patch_root(
+            cost_cny=out.get("cost_cny"),
+            latency_s=out.get("latency_s"),
+            usage=out.get("usage"),
+            stop_reason=out.get("stop_reason"),
+            ok=out.get("ok"),
+        )
+        out["trace_id"] = tracer.trace_id
+    return out
 
 
 @app.post("/chat/stream", summary="SSE 流式对话")
@@ -262,29 +281,59 @@ async def agent_stream(body: AgentIn, request: Request):
     """把每一轮的 tool_start / tool_done 实时推出来，最后给 summary。"""
     confirmed: set[str] = set()
 
+    tracer = None
+    hook = None
+    if body.trace:
+        exp = langfuse_exporter()
+        tracer = Tracer(name="agent.tool_loop", task=body.question,
+                        exporters=[exp] if exp else [])
+        hook = make_trace_hook(tracer, task=body.question)
+
     def worker(emit):
+        def fanout(ev):
+            """一个事件、两个消费者：SSE 给客户端看，trace 给事后复盘看。"""
+            if ev is not None and hook is not None:
+                hook(ev)
+            emit(ev)
+
         try:
+            if tracer is not None:
+                emit({"type": "trace_started", "trace_id": tracer.trace_id})
             res = run_tool_loop(
                 settings, body.question,
                 max_turns=body.max_turns, tool_choice=body.tool_choice,
                 provider=body.provider, model=body.model, max_tokens=body.max_tokens,
-                on_event=emit,
+                on_event=fanout,
                 allowed_tools=[t["function"]["name"] for t in TOOL_SCHEMAS],
                 confirmed=confirmed,
                 confirm_registry=CONFIRMATIONS,
             )
+            if tracer is not None:
+                tracer.patch_root(
+                    cost_cny=res.get("cost_cny"),
+                    latency_s=res.get("latency_s"),
+                    usage=res.get("usage"),
+                    turns=res.get("turns"),
+                    ok=res.get("ok"),
+                )
             emit({"type": "summary", "ok": res["ok"], "turns": res["turns"],
                   "tool_calls_made": res["tool_calls_made"], "cost_cny": res["cost_cny"],
-                  "latency_s": res["latency_s"], "trace": res["trace"]})
+                  "latency_s": res["latency_s"], "trace": res["trace"],
+                  "trace_id": tracer.trace_id if tracer else ""})
         except Exception as e:  # noqa: BLE001
+            if tracer is not None:
+                tracer.finish_root(error=f"{type(e).__name__}: {e}", status="error")
             emit({"type": "error", "message": f"{type(e).__name__}: {e}"})
         finally:
             emit(None)
 
+    headers = {"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}
+    if tracer is not None:
+        headers["X-Trace-Id"] = tracer.trace_id
     return StreamingResponse(
         pump_worker_to_sse(worker, request),
         media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+        headers=headers,
     )
 
 
